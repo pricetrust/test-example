@@ -11,4 +11,4 @@ Route::get('/', function () {
 Route::get(
     '/div/{a}/{b}',
     [CalcController::class, 'div']
-)->where('a', '[0-9]+')->where('b', '[0-9]+');
+);//->where('a', '[0-9]+')->where('b', '[0-9]+');

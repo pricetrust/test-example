@@ -19,4 +19,19 @@ class CalcControllerTest extends TestCase
 
         $response->assertExactJson(["result" => 2]);
     }
+
+    public function test_div_float(): void
+    {
+        $response = $this->get('/div/10.2/5.1');
+
+        $response->assertStatus(200);
+
+        $response->assertExactJson(["result" => 2]);
+    }
+
+    // public function test_div_fail_with_not_numbers(): void {
+    //     $response = $this->get('/div/10/5');
+
+    //     $response->assertStatus(200);
+    // }
 }
